@@ -1,4 +1,0 @@
-#!/bin/bash
-# Boot up EZRA app - opens in browser automatically
-cd frontend && npm run open
-
