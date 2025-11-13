@@ -6,6 +6,8 @@ import Plumbing from './pages/Plumbing';
 import Cleaning from './pages/Cleaning';
 import Moving from './pages/Moving';
 import Electrician from './pages/Electrician';
+import Assembly from './pages/Assembly';
+import Terms from './pages/Terms';
 import './App.css';
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
         <Route path="/cleaning" element={<Cleaning />} />
         <Route path="/moving" element={<Moving />} />
         <Route path="/electrician" element={<Electrician />} />
+        <Route path="/assembly" element={<Assembly />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
     </HashRouter>
   );

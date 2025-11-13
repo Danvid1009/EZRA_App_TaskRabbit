@@ -18,6 +18,10 @@ export const providers = [
   { id: 14, name: 'Maya Ron', service: 'Electrical', rating: 5.0, verified: true, price: '₪250/hour' },
   { id: 15, name: 'Rorri Azulay', service: 'Electrical', rating: 4.8, verified: true, price: '₪200/hour' },
   { id: 16, name: 'Niv Meir', service: 'Electrical', rating: 4.7, verified: true, price: '₪280/hour' },
+  { id: 17, name: 'Yael Shachar', service: 'Assembly', rating: 4.9, verified: true, price: '₪180/hour' },
+  { id: 18, name: 'Omer Sade', service: 'Assembly', rating: 4.8, verified: true, price: '₪200/hour' },
+  { id: 19, name: 'Lia Grinberg', service: 'Assembly', rating: 5.0, verified: true, price: '₪160/hour' },
+  { id: 20, name: 'Ron Halper', service: 'Assembly', rating: 4.7, verified: true, price: '₪220/hour' },
 ];
 
 export const jobs = [

@@ -1,76 +1,61 @@
 import { Link } from 'react-router-dom';
-import { jobs } from '../data';
 
 export default function Provider() {
-  const handleAccept = (job) => {
-    alert(`Accepted job: ${job.description}! (This is just a demo)`);
-  };
-
   return (
-    <div style={{ maxWidth: 800, margin: '0 auto', padding: 20 }}>
-      <Link to="/" style={{ color: '#0ea5e9', textDecoration: 'none' }}>← Home</Link>
-      
-      <h1 style={{ marginTop: 24, marginBottom: 8 }}>Available Jobs</h1>
-      <p style={{ color: '#666', marginBottom: 32 }}>Browse and accept jobs in your area</p>
-
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-        {jobs.map(job => (
-          <div
-            key={job.id}
-            style={{
-              border: '1px solid #ddd',
-              borderRadius: 8,
-              padding: 20,
-              background: 'white',
-            }}
-          >
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: 12 }}>
-              <div>
-                <h3 style={{ margin: 0, fontSize: 20, color: '#0ea5e9' }}>{job.category}</h3>
-                <p style={{ margin: '8px 0', fontSize: 16 }}>{job.description}</p>
-              </div>
-              <span style={{
-                background: '#fef3c7',
-                color: '#92400e',
-                padding: '4px 12px',
-                borderRadius: 4,
-                fontSize: 12,
-                fontWeight: 600,
-              }}>
-                New
-              </span>
-            </div>
-
-            <div style={{ marginBottom: 16, color: '#555', fontSize: 14, display: 'flex', flexDirection: 'column', gap: 4 }}>
-              <div>📍 {job.location}</div>
-              <div>💰 Budget: {job.budget}</div>
-              <div>🕐 {job.time}</div>
-            </div>
-
-            <button
-              onClick={() => handleAccept(job)}
-              style={{
-                padding: '10px 20px',
-                background: '#10b981',
-                color: 'white',
-                border: 'none',
-                borderRadius: 6,
-                fontSize: 16,
-                cursor: 'pointer',
-                fontWeight: 600,
-              }}
-            >
-              Accept Job
-            </button>
-          </div>
-        ))}
+    <div style={{
+      minHeight: '100vh',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '60px 20px',
+      background: 'linear-gradient(135deg, #eef2ff 0%, #ede9fe 50%, #fce7f3 100%)',
+    }}>
+      <div style={{
+        maxWidth: 520,
+        width: '100%',
+        background: 'rgba(255,255,255,0.96)',
+        borderRadius: 28,
+        padding: '48px 44px',
+        boxShadow: '0 35px 80px rgba(79, 70, 229, 0.15)',
+        border: '1px solid rgba(255,255,255,0.7)',
+        textAlign: 'center',
+      }}>
+        <Link to="/" style={{ color: '#6366f1', textDecoration: 'none', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+          ← Back to Home
+        </Link>
+        <h1 style={{ marginTop: 24, marginBottom: 12, fontSize: 32, fontWeight: 900, color: '#312e81' }}>
+          Become an EZRA
+        </h1>
+        <p style={{ color: '#4c1d95', lineHeight: 1.7, fontSize: 16, marginBottom: 28 }}>
+          Thanks for your interest! We’ve moved applications into a quick popup on the homepage. Click the
+          <strong> “Become an EZRA”</strong> buttons there to submit your details and our team will reach out.
+        </p>
+        <p style={{ color: '#4c1d95', lineHeight: 1.7, fontSize: 16, marginBottom: 32 }}>
+          Already applied? We’ll be in touch within one business day. For urgent questions, email
+          <br />
+          <a href="mailto:Ezrainisrael1@gmail.com" style={{ color: '#6366f1', textDecoration: 'none', fontWeight: 600 }}>
+            Ezrainisrael1@gmail.com
+          </a>
+        </p>
+        <Link
+          to="/"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '14px 28px',
+            borderRadius: 16,
+            background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+            color: 'white',
+            fontWeight: 700,
+            fontSize: 16,
+            textDecoration: 'none',
+            boxShadow: '0 20px 48px rgba(99, 102, 241, 0.3)',
+          }}
+        >
+          Go to Homepage
+        </Link>
       </div>
-
-      {jobs.length === 0 && (
-        <div style={{ textAlign: 'center', padding: 60, color: '#999' }}>
-          <p>No jobs available at the moment.</p>
-        </div>
-      )}
     </div>
   );
 }
